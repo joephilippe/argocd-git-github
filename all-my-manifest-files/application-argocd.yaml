@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application #  give your application name that u wanna deploy into the k8 cluster
+  name: green-argo-application #  give your application name that u wanna deploy into the k8 cluster
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
     path: all-my-manifest-files # just the directory where ur code are # give urs here from ur github repo
   destination:
     server: https://kubernetes.default.svc  
-    namespace: mom-france # give ur own name # this is new ns that u want argocd to create
+    namespace: mom-green-france # give ur own name # this is new ns that u want argocd to create
 
   syncPolicy:
     syncOptions:
